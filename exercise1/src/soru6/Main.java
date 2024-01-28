@@ -16,12 +16,25 @@ public class Main {
             array[i]=scanner.nextDouble();
         }
 
-        double smallest= array[0];
-
-        for(int i=0;i<=2;i++){
-            if(array[i]<smallest) smallest=array[i];
+        if(array[0]>array[1]) {
+            double temp=array[0];
+            array[0]=array[1];
+            array[1]=temp;
         }
-        System.out.println("En küçük sayı: "+smallest);
+        if(array[1]>array[2]){
+            double temp=array[1];
+            array[1]=array[2];
+            array[2]=temp;
+        }
+        if(array[0]>array[1]) {
+            double temp=array[0];
+            array[0]=array[1];
+            array[1]=temp;
+        }
+        
+        for(int i=0;i<=2;i++){
+            System.out.println(array[i]);
+        }
 
 
     }
