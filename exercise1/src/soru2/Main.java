@@ -1,5 +1,7 @@
 package soru2;
 
+import java.util.Scanner;
+
 public class Main {
     /* Soru2:
     Switch-case kullanmadan gerekiyorsa if kullan
@@ -9,7 +11,20 @@ public class Main {
 
     public static void main(String[] args) {
 
-        System.out.println("merhaba");
+        Scanner scanner= new Scanner(System.in);
+        System.out.println("Para tutarı: ");
+        double money= scanner.nextDouble();
+
+        if(money>=0 && money<=1000){
+            System.out.println("Uygulanan KDV tutarı: %10");
+            money+=(money*10)/100;
+            System.out.println("KDV'li tutar: "+money);
+        }
+        else{
+            System.out.println("Uygulanan KDV tutarı: %22");
+            money+= (money*22)/100;
+            System.out.println("KDV'li tutar: "+money);
+        }
 
     }
 }
